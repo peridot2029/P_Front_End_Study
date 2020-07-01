@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Test</title>
+  </head>
+
+  <body style="margin: 3rem; line-height: 1.5;">
+
+    <button type="button" onclick="callAjaxApi()">Random User API 호출</button>
+
+    <div class="output" style="margin-top: 1rem">
+      <ol></ol>
+    </div>
+
+    <script>
+
+      var endpoint = './ajaxtest.txt';
+      var output = document.querySelector('.output ol');
+
+      var callAjaxApi = function () {
+
+        // 여러 번 Ajax 요청하려면 매 통신 시마다 XMLHttpRequest 객체 생성 필요
+        var xhr = new XMLHttpRequest();
+
+        // 통신 요청 열기: 동기 통신 처리 (권장되지 않음)
+        xhr.open('GET', endpoint, false);
+
+        // 통신 보내기
+        xhr.send(null);
+
+        if (xhr.status === 200 || xhr.status === 304) {
+          output.innerHTML += '<li>' + xhr.responseText + '</li>';
+        } else {
+          console.warn('통신 실패');
+        }
+      };
+
+    </script>
+  </body>
+
+</html>

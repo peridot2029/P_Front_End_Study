@@ -1,0 +1,33 @@
+nav, div, span,ul, li { padding: 0; margin: 0; }
+ol, ul, li, dl, dt dd { list-style: none; }
+ul li { float: left; letter-spacing: 0.25em; }
+a{ text-decoration:none; color:#8f8f8f; }
+.nav .div{ position:relative; width:500px; margin: 0 auto; }
+.div ul{ display:flex; }
+.div ul li { 
+	flex:1; 
+	display:block; 
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+.div ul li a:hover{ color:black; }
+
+.div ul .span{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100px;
+	height:3px;
+	background:#279d76;
+}
+
+
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width:100%;
+	background:#fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

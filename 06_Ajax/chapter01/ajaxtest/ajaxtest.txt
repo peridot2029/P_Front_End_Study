@@ -1,0 +1,1 @@
+Ajax 호출은 매 통신 시도 시, XMLHttpRequest 객체를 생성해야 합니다.

@@ -1,0 +1,513 @@
+body {
+  overflow: auto;
+}
+
+section {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* reuse css icon */
+.more {
+  color: #000;
+}
+
+.more::after {
+  position: relative;
+  margin-left: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e83d3d;
+  content: '+';
+}
+
+.contents::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+/* cotents category */
+.category {
+  position: relative;
+  top: 10px;
+  margin-top: 30px;
+}
+
+.category ul::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.category ul li {
+  position: relative;
+  float: left;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+.category ul li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.category ul li button {
+  position: relative;
+  display: block;
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* category line */
+.category ul li::after {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 1px;
+  height: 14px;
+  background: #666;
+  content: '';
+}
+
+
+/* category line remove */
+.category ul li:first-of-type::after {
+  display: none;
+}
+
+/* category button active */
+.category ul li button.active {
+  color: #e83d3d;
+  text-decoration: underline;
+}
+
+/* inner tab */
+.tabpannel {
+  position: relative;
+}
+
+.tabpannel .week {
+  margin: -21px 0 30px 365px;
+}
+
+.tabpannel .week::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.tabpannel .week li {
+  float: left;
+  margin-left: 15px;
+}
+
+.tabpannel .week li:first-child {
+  margin-left: 0;
+}
+
+.tabpannel .week li a {
+  display: block;
+  height: 44px;
+  width: 44px;
+  font-size: 16px;
+  line-height: 44px;
+  border-radius: 100%;
+  text-align: center;
+  color: #fff;
+  background: #c2c2c2;
+}
+
+/* week link active */
+.tabpannel .week li a.active  {
+  background: #e83d3d;
+}
+
+/* moday commic */
+.commic-list ul::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.commic-list ul li {
+  float: left;
+  margin-right: 38px;
+  margin-bottom: 43px;
+}
+
+.commic-list ul li a {
+  display: block;
+  height: 139px;
+}
+
+.commic-list li a figure {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  margin: 0;
+}
+
+.commic-list li a figcaption i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 29px;
+  height: 29px;
+  text-indent: -9999px;
+}
+
+/* commic webtoon state icon */
+i.icon.up {
+  background: url('./../images/icon.png') 0 -50px no-repeat;
+}
+
+i.icon.sleep {
+  background: url('./../images/icon.png') 0 -100px no-repeat;
+}
+
+.commic-list li a figcaption strong {
+  display: block;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+
+.commic-list li a figcaption span {
+  font-size: 12px;
+  color: #888787;
+}
+
+.commic-list li a figure img {
+  width: 148px;
+  height: 106px;
+  background: #f3f3f3;
+}
+
+.commic-list ul li:nth-child(4),
+.commic-list ul li:nth-child(8) {
+  margin-right: 330px;
+}
+
+.commic-list ul li:nth-of-type(6n+14) {
+  margin-right: 0;
+}
+
+/* artcle */
+article {
+  position: absolute;
+  top: 73px;
+  right: 0;
+  width: 330px;
+  height: 328px;
+  background: #f3f3f3;
+}
+
+/* artcie btn group */
+article .btn-group {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  padding: 0 12px;
+  z-index: 10;
+}
+
+article .btn-group span {
+  display: block;
+  font-size: 13px;
+}
+
+article .btn-group span b {
+  font-size: 13px;
+  font-weight: normal;
+  color: #e83d3d;
+}
+
+article .btn-group .btn {
+  display: block;
+  position: absolute;
+  top: 3px;
+  width: 8px;
+  height: 13px;
+  text-indent: -9999px;
+}
+
+article .btn-group .btn::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 13px;
+  content: '';
+}
+
+
+article .btn-group .btn.prev {
+  left: 0;
+}
+
+article .btn-group .btn.next {
+  right: 0;
+}
+
+/* artcile page icon */
+article .btn-group .btn.prev::after {
+  background: #f3f3f3 url('./../images/btn_comm_180814.png') -324px -1228px no-repeat;
+}
+
+article .btn-group .btn.next::after {
+  background: #f3f3f3 url('./../images/btn_comm_180814.png') -336px -1228px no-repeat;
+}
+
+
+/* artcie activation */
+article ul li.active,
+article ul li a {
+  display: block;
+}
+
+/* artcie deactivation */
+article ul li {
+  display: none;
+}
+
+article ul,
+article ul li,
+article ul li a,
+article ul li a figure {
+  height: inherit;
+}
+
+article ul li a figure {
+  position: relative;
+  margin: 0;
+}
+
+article ul li a figure figcaption {
+  padding: 20px 20px 0 20px;
+}
+
+article ul li a figure figcaption em {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #e83d3d;
+}
+
+article ul li a figure figcaption strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000;
+
+}
+
+article ul li a figure figcaption span {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+article ul li a figure img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* banner */
+.banner a {
+  display: block;
+  width: 1080px;
+  height: 176px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.banner a img {
+  display: block;
+  width: inherit;
+  height: auto;
+}
+
+/* content ad*/
+.rank-ad {
+  margin-bottom: 20px;
+}
+
+.rank-ad::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.rank-ad .rank,
+.rank-ad .finish,
+.rank-ad .ad {
+  overflow: hidden;
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+
+
+/* ad */
+.rank-ad .ad {
+  height: 580px;
+  background: #dedfdf;
+}
+
+/* rank ad title */
+.rank-ad .title {
+  margin-bottom: 10px;
+}
+
+.rank-ad .title::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.rank-ad .title h3 {
+  float: left;
+  color: #666;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.rank-ad .title .more {
+  float: right;
+  line-height: 35px;
+}
+
+.rank-ad .list li {
+  margin-bottom: 40px;
+}
+
+.rank-ad .list li a {
+  display: block;
+}
+
+.rank-ad .list li:last-of-type {
+  margin-bottom: 0;
+}
+
+.rank-ad .rank {
+  margin-left: 0;
+}
+
+.rank-ad .list a figure::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.rank-ad .list a figure b.number {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rank-ad .rank .list a figure b.number {
+  background: #e83d3d;
+  color: #f3f3f3;
+}
+
+.rank-ad .finish .list a figure b.number {
+  background: #000;
+  color: #f3f3f3;
+}
+
+.rank-ad .list a figure {
+  position: relative;
+  margin: 0;
+  height: 78px;
+}
+
+.rank-ad .list a figure img {
+  width: 30%;
+  float: left;
+  height: inherit;
+  background: #f3f3f3;
+}
+
+
+.rank-ad .list a figure figcaption {
+  float: right;
+  width: calc(100% - 110px);
+  height: 91px;
+}
+
+
+.rank-ad .list a figure figcaption em,
+.rank-ad .list a figure figcaption strong,
+.rank-ad .list a figure figcaption span {
+  display: block;
+  line-height: 1;
+}
+
+.rank-ad .list a figure figcaption strong {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.rank-ad .list a figure figcaption span {
+  color: #666;
+}
+
+.rank-ad .list a figure:hover figcaption strong {
+  text-decoration: underline;
+}
+
+/* notice */
+.notice {
+  border-top: 1px solid #ccc;
+}
+
+.notice>div {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.notice>div::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.notice .title {
+  float: left;
+  font-size: 16px;
+  color: red;
+  line-height: 24px;
+}
+
+.notice .link {
+  float: left;
+  margin-left: 40px;
+  line-height: 24px;
+}
+
+.notice .link span {
+  margin-left: 20px;
+}
+
+.notice .link:hover strong {
+  text-decoration: underline;
+}
+
+.notice .more {
+  float: right;
+  line-height: 24px;
+}

@@ -1,0 +1,205 @@
+header {
+  border-bottom: 1px solid #ccc;
+}
+
+/* allShare */
+.allShare {
+  background: #262424;
+}
+
+.allShare>div {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.allShare>div::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.allShare .logo {
+  float: left;
+}
+
+.allShare .logo a {
+  display: block;
+  width: 60px;
+  height: 20px;
+  background: url('https://i.postimg.cc/B6DztVXS/wt-minidaum-20170908.png')no-repeat;
+}
+
+/* user service link */
+.allShare ul {
+  float: right;
+}
+
+.allShare ul::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.allShare ul li {
+  float: left;
+  margin-left: 20px;
+}
+
+.allShare ul li:first-child {
+  margin-left: 0;
+}
+
+.allShare .login a {
+  display: block;
+  width: 52px;
+  height: 22px;
+  line-height: 22px;
+  background: #383a3f;
+  text-align: center;
+  color: #888787;
+}
+
+.allShare .icon1 a {
+  display: block;
+  width: 20px;
+  height: 14px;
+  margin-top: 5px;
+  background: url('https://i.postimg.cc/bYZVxP16/minidaum-v5.png') 0 -46px no-repeat;
+}
+
+.allShare .icon2 a {
+  display: block;
+  width: 20px;
+  height: 15px;
+  margin-top: 5px;
+  background: url('https://i.postimg.cc/bYZVxP16/minidaum-v5.png') -23px -46px no-repeat;
+}
+
+.allShare .icon3 a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url('https://i.postimg.cc/B6DztVXS/wt-minidaum-20170908.png') -24px -46px no-repeat;
+}
+
+.allShare .icon1 a:hover {
+  background-position: -50px -46px;
+}
+
+.allShare .icon2 a:hover {
+  background-position: -73px -46px;
+}
+
+/* webtoon */
+.webtoon>div {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.webtoon>div::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.webtoon .logo {
+  float: left;
+}
+
+.webtoon .logo a {
+  display: block;
+  width: 172px;
+  height: 31px;
+  background: url('https://i.postimg.cc/5y3M0d8L/logo-webtoon.png') no-repeat;
+}
+
+.webtoon nav {
+  float: left;
+  margin-left: 280px;
+}
+
+.webtoon nav ul::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.webtoon nav ul li {
+  float: left;
+  margin-right: 60px;
+}
+
+.webtoon nav ul li:last-child {
+  margin-right: 0;
+}
+
+.webtoon nav ul li a {
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: black;
+}
+
+.btn-group {
+  float: right;
+}
+
+.btn-group::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.recently {
+  float: left;
+  margin-right: 10px;
+}
+
+/* 사용자가 버튼을 인지하게끔 가면 cursor: pointer ?! */
+.recently .btn {
+  display: block;
+  position: relative;
+  width: 82px;
+  height: 35px;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.recently .btn::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 33px;
+  background: url('./../images/clock.svg') center center no-repeat;
+  background-size: 80%;
+  content: '';
+}
+
+.search-area {
+  float: left;
+}
+
+.search-area .btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  background: url('./../images/btn-search.svg') center center no-repeat #fff;
+  background-size: 70%;
+  box-sizing: border-box;
+  text-indent: -9999px;
+  cursor: pointer;
+}
